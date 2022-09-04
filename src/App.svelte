@@ -1,21 +1,17 @@
 <script>
   let inputArray = ["General", "Onboarding", "Custom Domain", "Messaging"];
   let insertedValue = "";
+  let inputField;
   function handleInput(e) {
     let value = e.target.value;
     insertedValue = value;
     insertedValue = insertedValue;
   }
-  let inputField;
 
   function handleAdd() {
     inputArray.push(insertedValue);
     inputArray = inputArray;
     inputField.value = "";
-  }
-  function handleActive() {
-    active = true;
-    active = active;
   }
 </script>
 
@@ -30,7 +26,7 @@
       <h2>Nothing To Show... Add some links to see</h2>
     {:else}
       {#each inputArray as btnValue}
-        <button class="generatedBtn" on:click={handleActive}>
+        <button class="generatedBtn">
           {btnValue}
         </button>
       {/each}
