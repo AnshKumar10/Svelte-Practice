@@ -6,10 +6,12 @@
     insertedValue = value;
     insertedValue = insertedValue;
   }
+  let inputField;
+
   function handleAdd() {
     inputArray.push(insertedValue);
     inputArray = inputArray;
-    value = "";
+    inputField.value = "";
   }
   function handleActive() {
     active = true;
@@ -19,7 +21,7 @@
 
 <div class="container">
   <div class="input">
-    <input on:input={handleInput} type="text" />
+    <input bind:this={inputField} on:input={handleInput} type="text" />
     <button class="addBtn" on:click={handleAdd}>Add more Menu</button>
   </div>
   <div class="generatedComp">
